@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+}
+
+.cards{
+    display: flex;
+    background-color: brown;
+    justify-content: center;
+}
+
+img{
+    max-width: 200px;
+    width: 100%;
+}
