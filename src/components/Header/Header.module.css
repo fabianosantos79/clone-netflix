@@ -1,0 +1,30 @@
+.container{
+    
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.listaNav{
+    display: flex;
+    gap: 50px;
+}
+
+.listaNavItem{
+    text-decoration: none;
+    font-size: 16px;
+    list-style: none;
+}
+
+.boxBanner{
+    background-image: url('https://cdn.jsdelivr.net/gh/Th3Wall/assets-cdn/Fakeflix/Fakeflix_logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    background-position: center;
+}

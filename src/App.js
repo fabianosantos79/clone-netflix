@@ -1,10 +1,12 @@
 import './App.css';
 import { categories } from './categories';
+import Header from './components/Header';
 import ListMovies from './components/ListMovies';
 
 function App() {
   return (
     <div className="App">
+    <Header />
       {categories.map(category => (
         <ListMovies
           key={category.name}
