@@ -1,3 +1,4 @@
+import Banner from '../Banner';
 import styles from './Header.module.css'
 
 const Header = () => {
@@ -12,9 +13,6 @@ const Header = () => {
                 </ul>
                 <button>Inscreva-se</button>
             </nav>
-            <div className={styles.boxBanner}>
-                Banner
-            </div>
         </header>
     )
 }

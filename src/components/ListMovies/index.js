@@ -7,7 +7,7 @@ const imageHost = "https://image.tmdb.org/t/p/original"
 const ListMovies = ({ title, path }) => {
     const [movies, setMovies] = useState([]);
 
-    const fecthMovies = async (path) => {
+    const fecthMovies = async () => {
         try {
             const data = await getMovies(path)
             setMovies(data.results)
@@ -18,7 +18,7 @@ const ListMovies = ({ title, path }) => {
 
     useEffect(() => {
         fecthMovies(path)
-    }, [path])
+    }, [])
 
     return (
         <div className={styles.container}>
