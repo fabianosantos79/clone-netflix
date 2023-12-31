@@ -16,6 +16,10 @@
     text-decoration: none;
     font-size: 16px;
     list-style: none;
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 .boxBanner{
@@ -24,4 +28,12 @@
     background-size: cover;
     height: 450px;
     background-position: center;
+}
+
+.botaoInscrevase{
+    background-color: #E6020C;
+    padding: 5px 20px;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 10px;
 }

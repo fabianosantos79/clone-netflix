@@ -11,7 +11,7 @@ const Header = () => {
                     <li className={styles.listaNavItem}>Filmes</li>
                     <li className={styles.listaNavItem}>Séries</li>
                 </ul>
-                <button>Inscreva-se</button>
+                <button className={styles.botaoInscrevase}>Inscreva-se</button>
             </nav>
         </header>
     )

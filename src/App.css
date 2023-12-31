@@ -1,5 +1,11 @@
 body{
-    background-color: #010101;
+    background-color: #12222D;
     color: #ffffff;
-    padding: 20px 30px;
+    margin: 0;
+}
+
+main{
+    background-color: #010101;
+    padding: 30px 30px;
+    margin: 0;
 }

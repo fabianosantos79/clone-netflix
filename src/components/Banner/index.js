@@ -28,8 +28,8 @@ const Banner = ({ path }) => {
             backgroundImage: `url("https://image.tmdb.org/t/p/original${movie.backdrop_path}")`,
             backgroundPosition: "center",
         }}>
-            <h2>{movie.title}</h2>
-            <h4>{movie.overview}</h4>
+            <h2 className={styles.titulo}>{movie.title}</h2>
+            <p className={styles.descricao}>{movie.overview}</p>
         </div>
     )
 }

@@ -1,0 +1,15 @@
+.footer{
+    background-color: #12222D;
+    display: flex;
+    padding: 10px 50px;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.botaoInscrevase{
+    background-color: #E6020C;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 10px;
+}
