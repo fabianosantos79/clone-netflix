@@ -5,11 +5,11 @@ import { SlArrowRight } from "react-icons/sl";
 import { SlArrowLeft } from "react-icons/sl";
 
 
-
 const imageHost = "https://image.tmdb.org/t/p/original"
 
 const ListMovies = ({ title, path, isLarge }) => {
     const [movies, setMovies] = useState([]);
+    const [scrollX, setScrollX] = useState(0);
 
     const fecthMovies = async () => {
         try {
@@ -20,17 +20,27 @@ const ListMovies = ({ title, path, isLarge }) => {
         }
     }
 
+    const handleArrowLeft = () => {
+        let widthX = 0 + 300;
+        if (scrollX < 0) {
+            setScrollX(scrollX + widthX);
+        }
+    }
+
+    const handleArrowRight = () => {
+        let widthFull = movies.length * 150
+        let widthX = 0 - 300;
+        if (scrollX < widthFull) {
+            setScrollX(scrollX + widthX);
+        }
+    }
+
+
+
     useEffect(() => {
         fecthMovies(path)
     }, [])
 
-    const handleArrowLeft = () => {
-        
-    }
-
-    const handleArrowRight = () => {
-
-    }
 
     return (
         <div className={styles.container}>
@@ -41,10 +51,11 @@ const ListMovies = ({ title, path, isLarge }) => {
                     <SlArrowRight className={styles.arrowRight} onClick={handleArrowRight} />
                 </div>
             </div>
-            <div className={styles.cards}>
+            <div className={styles.cards} style={{ marginLeft: scrollX }}>
                 {movies.map(movie => (
-                    <img className={isLarge ? styles.imgCardLarge : styles.imgCard} key={movie.id} src={isLarge ? `${imageHost}${movie.backdrop_path}` : `${imageHost}${movie.poster_path}`} alt={movie.name} />
-                ))}
+                    <img className={isLarge ? styles.imgCardLarge : styles.imgCard} key={movie.id} src={isLarge ? `${imageHost}${movie.backdrop_path}` : `${imageHost}${movie.poster_path}`} alt={movie} />
+                ))
+                }
             </div>
         </div>
     )
